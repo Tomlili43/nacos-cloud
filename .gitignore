@@ -3,7 +3,7 @@
 
 # IntelliJ IDEA
 .idea/
-
+service/target/
 # Maven
 target/
 pom.xml.tag

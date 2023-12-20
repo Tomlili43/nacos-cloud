@@ -22,6 +22,19 @@
   </properties>
 
   <dependencies>
+
+  <!-- https://mvnrepository.com/artifact/org.dromara.dynamictp/dynamic-tp-core -->
+<!-- <dependency>
+    <groupId>org.dromara.dynamictp</groupId>
+    <artifactId>dynamic-tp-core</artifactId>
+    <version>1.1.6.1</version>
+</dependency> -->
+          <dependency>
+        <groupId>org.dromara.dynamictp</groupId>
+        <artifactId>dynamic-tp-spring-cloud-starter-nacos</artifactId>
+        <version>1.1.6.1</version>
+    </dependency>
+
       <!--bootstrap依赖-->
       <dependency>
           <groupId>org.springframework.cloud</groupId>
