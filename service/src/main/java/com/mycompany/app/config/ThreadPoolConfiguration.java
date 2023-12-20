@@ -62,7 +62,7 @@ public class ThreadPoolConfiguration {
     return ThreadPoolBuilder.newBuilder()
             .threadPoolName("dtpExecutor1")
             .threadFactory("test-dtp-common")
-            .corePoolSize(10)
+            .corePoolSize(5)
             .maximumPoolSize(15)
             .keepAliveTime(40)
             .timeUnit(TimeUnit.SECONDS)

@@ -26,6 +26,9 @@ import org.dromara.dynamictp.core.executor.OrderedDtpExecutor;
 import org.dromara.dynamictp.core.support.task.runnable.NamedRunnable;
 import org.dromara.dynamictp.core.support.task.runnable.OrderedRunnable;
 import com.mycompany.app.service.TestService;
+
+import jakarta.annotation.Resource;
+
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +46,9 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Service
 public class TestServiceImpl implements TestService {
+
+    @Resource
+    private ThreadPoolExecutor dtpExecutor1;
 
     private final ThreadPoolExecutor jucThreadPoolExecutor;
 
@@ -96,8 +102,8 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public void testCommonDtp() {
-        Executor dtpExecutor1 = DtpRegistry.getExecutor("dtpExecutor1");
-        for (int i = 0; i < 10; i++) {
+        // Executor dtpExecutor1 = DtpRegistry.getExecutor("dtpExecutor1");
+        for (int i = 0; i < 100; i++) {
             dtpExecutor1.execute(NamedRunnable.of(() -> {
                 try {
                     Thread.sleep(1000);
