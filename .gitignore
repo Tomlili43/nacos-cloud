@@ -1,6 +1,6 @@
 # macOS
 .DS_Store
-
+.vscode/
 # IntelliJ IDEA
 .idea/
 service/target/
